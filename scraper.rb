@@ -21,23 +21,15 @@ end
 def strip_doc(html_doc)
   puts "Stripping out data"
   html_doc.search('.jobsearch-SerpJobCard').each do |card|
-    title = card.css('.jobtitle').text.strip
-    company = card.css('.company').text.strip
-    location = card.css('.location').text.strip
-    salary = card.css('.salary.no-wrap').text.strip
-    summary = card.css('.summary').text.strip
-    link = "https://www.indeed.co.uk" + card.css('a').attribute('href').value
-    job_listing_html = job_page(link)
     job = {
-      title: title,
-      company: company,
-      location: location,
-      salary: salary,
-      summary: summary,
-      link: link,
-      listing_html: job_listing_html
+      title: card.css('.jobtitle').text.strip,
+      company: card.css('.company').text.strip,
+      location: card.css('.location').text.strip,
+      salary: card.css('.salary.no-wrap').text.strip,
+      summary: card.css('.summary').text.strip,
+      link: "https://www.indeed.co.uk" + card.css('a').attribute('href').value,
+      listing_html: job_page(link)
     }
-
     @arr.push(job)
   end
   store_jobs(@arr)
