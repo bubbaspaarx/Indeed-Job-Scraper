@@ -1,6 +1,6 @@
-###Welcome to my Indeed Job Scraper
+# Welcome to my Indeed Job Scraper
 
-##Description
+## Description
 
 This is a scraper for the Indeed.co.uk job site. It's basic function is to search for jobs based on options passed in to a rake task and return a json of those jobs.
 
@@ -14,7 +14,7 @@ The details returned are
 - link to job page
 - listing_html for reuse
 
-##Instructions to use
+## Instructions to use
 
 ```zsh
   rake indeed_scraper
