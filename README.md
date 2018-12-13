@@ -25,3 +25,11 @@ or with options to scrape for a particular job type and number of pages to scrap
 ```zsh
   rake indeed_scraper[job_type, number_of_pages]
 ```
+
+jobs.json must have the following data in to run correctly.
+
+```json
+{
+  "jobs": []
+}
+```
