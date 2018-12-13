@@ -20,10 +20,10 @@ The details returned are
   rake indeed_scraper
 ```
 
-or with options to scrape for a particular job type and number of pages to scrape.
+or with options to scrape for a particular job type and number of pages to scrape. No spaces between arguments, just a comma.
 
 ```zsh
-  rake indeed_scraper[job_type, number_of_pages]
+  rake indeed_scraper[job_type,number_of_pages]
 ```
 
 jobs.json must have the following data in to run correctly.

@@ -28,8 +28,9 @@ def strip_doc(html_doc)
       salary: card.css('.salary.no-wrap').text.strip,
       summary: card.css('.summary').text.strip,
       link: "https://www.indeed.co.uk" + card.css('a').attribute('href').value,
-      listing_html: job_page(link)
+      listing_html: ''
     }
+    job[:listing_html] = job_page(job[:link])
     @arr.push(job)
   end
   store_jobs(@arr)
