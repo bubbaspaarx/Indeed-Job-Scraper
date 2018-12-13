@@ -1,4 +1,4 @@
-### Welcome to my Indeed Job Scraper
+# Welcome to my Indeed Job Scraper
 
 ## Description
 
